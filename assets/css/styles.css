@@ -948,6 +948,10 @@ section#demo  img:hover {
 section#demo header h1:after {
   background: #66cdcc;
 }
+
+.featuredLogo {
+  margin: 0 25px;
+}
 /* Get app Section */
 section#getApp {
   background: url("../img/freeze/bk-freeze.jpg");
