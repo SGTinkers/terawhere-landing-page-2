@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="assets/js/rs-plugin/css/settings.css">
 
     <link rel="stylesheet" href="assets/css/styles.css">
-
+    <link rel="stylesheet" href="assets/css/features.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
 
 
@@ -47,7 +47,6 @@
     </div>
 
     <header>
-
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -73,6 +72,8 @@
                             </li>
                             <li><a href="#screens">Team</a>
                             </li>
+                            <li><a href="#report">Report</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->
@@ -83,10 +84,10 @@
 
         <!--RevSlider-->
         <div class="tp-banner-container">
-            <div class="tp-banner" >
+            <div class="tp-banner hidden-xs">
                 <ul>
                     <!-- SLIDE 3 -->
-                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
                       <!-- MAIN IMAGE -->
                       <img src="assets/img/transparent.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                       <!-- LAYERS -->
@@ -102,21 +103,24 @@
                           <img src="assets/img/freeze/Slides/hand-freeze.png" alt="">
                       </div>
 
-                      <div class="tp-caption lfl fadeout visible-xs"
-                          data-x="left"
-                          data-y="center"
-                          data-hoffset="700"
-                          data-voffset="0"
-                          data-speed="500"
-                          data-start="700"
-                          data-easing="Power4.easeOut">
-                          <img src="assets/img/freeze/iphone-freeze.png" alt="">
-                      </div>
-
-                      <div class="tp-caption large_white_bold sft" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
+                      <div class="tp-caption large_white_bold sft"
+                      data-x="550"
+                      data-y="center"
+                      data-hoffset="0"
+                      data-voffset="-80"
+                      data-speed="500"
+                      data-start="1200"
+                      data-easing="Power4.easeOut">
                           Going for Terawih
                       </div>
-                      <div class="tp-caption large_white_light sfb" data-x="550" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
+                      <div class="tp-caption large_white_light sfb"
+                      data-x="550"
+                      data-y="center"
+                      data-hoffset="0"
+                      data-voffset="0"
+                      data-speed="1000"
+                      data-start="1500"
+                      data-easing="Power4.easeOut">
                           has never been easier
                       </div>
 
@@ -124,12 +128,9 @@
                           <a href="#about" class="btn btn-primary inverse btn-lg">LEARN MORE</a>
                       </div>
                       <div class="tp-caption sfr hidden-xs" data-x="730" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1500" data-start="1900" data-easing="Power4.easeOut">
-                          <a href="https://play.google.com/store/apps/details?id=tech.msociety.terawhere" class="btn btn-default btn-lg">Download</a>
+                          <a href="#getApp" class="btn btn-default btn-lg">Download</a>
                       </div>
-
                   </li>
-
-
                 </ul>
             </div>
         </div>
@@ -192,11 +193,11 @@
                     <p>Its as easy as 1, 2, 3!</p>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-sm-4 scrollpoint sp-effect1">
-                        <h1 style="text-align: right"> As a Driver </h1>
+                    <div class="col-xs-12 col-md-4 col-sm-4 scrollpoint sp-effect1 as-a driver">
+                        <h1 class="header">As a Driver</h1>
 
-                        <div class="media text-right feature">
-                            <a class="pull-right" href="#">
+                        <div class="media feature">
+                            <a href="#features">
                                 <i class="fa fa-map-marker fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -204,8 +205,8 @@
                                  Provide pickup details, no. of seats available, and your Terawih destination.
                             </div>
                         </div>
-                        <div class="media text-right feature">
-                            <a class="pull-right" href="#">
+                        <div class="media feature">
+                            <a href="#features">
                                 <i class="fa fa-bell fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -213,9 +214,9 @@
                                 You will be notified once a passenger books your ride offer.
                             </div>
                         </div>
-                        <div class="media text-right feature">
-                            <a class="pull-right" href="#">
-                                <i class="fa fa-users fa-2x"></i>
+                        <div class="media feature">
+                            <a href="#features">
+                                <i class="fa fa-car fa-2x"></i>
                             </a>
                             <div class="media-body">
                                 <h3 class="media-heading">Meetup & Move</h3>
@@ -223,25 +224,25 @@
                             </div>
                         </div>
 
-                        <div class="media text-right feature">
+                        <div class="media feature text-center">
                             <br />
                             <br />
-                             <a href="#about" class="btn btn-primary btn-lg">
+                             <a href="https://youtu.be/SQhRIWjY3cY" class="btn btn-primary btn-lg btn-tutorial" target="_blank">
                                 <i class="fa fa-play-circle fa-1x" style="padding:0; margin: 0; border:0;" aria-hidden="true"></i>
-                                Driver's Step-By-Step Guide
+                                Drivers' Tutorial
                              </a>
                         </div>
-
+                       <br />
 
                     </div>
-                    <div class="col-md-4 col-sm-4 text-center" >
-                        <img src="assets/img/freeze/android.png" class="sp-effect5" height="550" alt="">
+                    <div class="col-xs-12 col-md-4 col-sm-4 text-center" >
+                        <img src="assets/img/freeze/android2.png" class="sp-effect5" height="550" alt="">
                     </div>
-                    <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
-                    <h1> As a Passenger </h1>
+                    <div class="col-xs-12 col-md-4 col-sm-4 scrollpoint sp-effect2 as-a passenger">
+                      <h1 class="header"> As a Passenger </h1>
                         <div class="media feature">
-                            <a class="pull-left" href="#">
-                                <i class="fa fa-map-marker fa-2x"></i>
+                            <a href="#features">
+                                <i class="fa fa-compass fa-2x" aria-hidden="true"></i>
                             </a>
                             <div class="media-body">
                                 <h3 class="media-heading">Find Nearby Rides</h3>
@@ -249,8 +250,8 @@
                             </div>
                         </div>
                         <div class="media feature">
-                            <a class="pull-left" href="#">
-                                <i class="fa fa-film fa-2x"></i>
+                            <a href="#features">
+                                <i class="fa fa-check-circle fa-2x"></i>
                             </a>
                             <div class="media-body">
                                 <h3 class="media-heading">Book a Ride</h3>
@@ -258,20 +259,20 @@
                             </div>
                         </div>
                         <div class="media feature">
-                            <a class="pull-left" href="#">
-                                <i class="fa fa-compass fa-2x"></i>
+                            <a href="#features">
+                                <i class="fa fa-car fa-2x"></i>
                             </a>
                             <div class="media-body">
                                 <h3 class="media-heading">Meetup & Move</h3>
                                 Meet up with your new friend and enjoy the ride to Terawih!
                             </div>
                         </div>
-                        <div class="media text-left feature">
+                        <div class="media feature text-center">
                             <br />
                             <br />
-                             <a href="#about" class="btn btn-primary btn-lg">
+                             <a href="https://youtu.be/Z31_vzWWbAU" target="_blank" class="btn btn-primary btn-lg btn-tutorial">
                                 <i class="fa fa-play-circle fa-1x" style="padding:0; margin: 0; border:0;" aria-hidden="true"></i>
-                                Passenger's Step-By-Step Guide
+                                Passengers' Tutorial
                              </a>
                         </div>
                     </div>
@@ -360,16 +361,16 @@
                     <div class="one">
                         <img src="assets/img/faruq.jpg" width="200" alt="">
                         <h3>Faruq Rasid</h3>
-                        <p class="">Project Manager (Tech)</p>
+                        <p class="">Project Manager</p>
                     </div>
                     <div class="three">
                         <img src="assets/img/hafidz.jpg" width="200" alt="">
                         <h3>Tengku Hafidz</h3>
-                        <p class="">Asst. Project Manager (Non-Tech)</p>
+                        <p class="">Asst. Project Manager</p>
                     </div>
                     <div class="one">
                         <img src="assets/img/aziz.jpg" width="200" alt="">
-                        <h3>Aziz Safudin</h3>
+                        <h3>Abdul Aziz</h3>
                         <p class="">Back-End Developer</p>
                     </div>
                     <div class="one">
@@ -385,11 +386,6 @@
                     <div class="one">
                         <img src="assets/img/saiful.jpg" width="200" alt="">
                         <h3>Saiful Shahril</h3>
-                        <p class="">Android Developer</p>
-                    </div>
-                    <div class="one">
-                        <img src="assets/img/irfan.jpg" width="200" alt="">
-                        <h3>Muhd Irfan</h3>
                         <p class="">Android Developer</p>
                     </div>
                     <div class="one">
@@ -426,6 +422,37 @@
                 </div>
             </div>
         </section>
+
+        <section id="report">
+              <div class="container">
+                  <div class="section-heading scrollpoint sp-effect3">
+                      <h1>Report</h1>
+                  </div>
+                  <div class="row">
+                      <div class="col-xs-12 col-md-6 col-md-offset-3">
+                          <form>
+                              <div class="form-group">
+                                  <label for="email-address">Email address</label>
+                                  <input required type="email" class="form-control input-lg" id="email-address" placeholder="Email">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="theReport" id="count_message">Report</label>
+                                  <h6 class="pull-right" id=""></h6>
+                                  <textarea required class="form-control input-lg" rows="5" id="theReport" placeholder="Describe the problem in a few words"></textarea>
+                              </div>
+
+                              <div class="form-group text-center">
+                                  <button class="btn btn-primary btn-lg" id="reportButton">Submit</button>
+                              </div>
+                          </form>
+                      </div>
+
+                  </div>
+              </div>
+          </section>
+
+
         <footer>
             <div class="container">
                 <a href="#" class="scrollpoint sp-effect3">
@@ -461,6 +488,50 @@
     <script>
         $(document).ready(function() {
             appMaster.preLoader();
+
+            $(document).ready(function() {
+                  appMaster.preLoader();
+                  var text_max = 500;
+                  $('#count_message').html("Report - " + text_max + ' characters left');
+
+                  $('#theReport').keyup(function() {
+                      var text_length = $('#theReport').val().length;
+                      var text_remaining = text_max - text_length;
+
+                      var btnElem = $("#reportButton");
+                      if(text_remaining <= 0){
+                          // too much
+                          if(!btnElem.attr("disabled")){
+                              btnElem.attr("disabled", true);
+                          }
+
+                          if(!btnElem.hasClass("btn-danger")){
+                              btnElem.removeClass("btn-primary");
+                              btnElem.addClass("btn-danger");
+                          }
+
+                          if(btnElem.text() === "Submit"){
+                              btnElem.text("Can't Submit - Too many characters!");
+                          }
+                      } else {
+
+                          if(btnElem.attr("disabled")){
+                              btnElem.attr("disabled", false);
+                          }
+
+                          if(btnElem.hasClass("btn-danger")){
+                              btnElem.removeClass("btn-danger");
+                              btnElem.addClass("btn-primary");
+                          }
+
+                          if(btnElem.text() != "Submit"){
+                              btnElem.text("Submit");
+                          }
+                      }
+
+                      $('#count_message').html("Report - " + text_remaining + ' characters left');
+                  });
+              });
         });
 
         function notReady(){
