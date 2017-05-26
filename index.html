@@ -369,7 +369,7 @@
                     </div>
                     <div class="one">
                         <img src="assets/img/aziz.jpg" width="200" alt="">
-                        <h3>Aziz Safudin</h3>
+                        <h3>Abdul Aziz</h3>
                         <p class="">Back-End Developer</p>
                     </div>
                     <div class="one">
@@ -426,6 +426,37 @@
                 </div>
             </div>
         </section>
+
+        <section id="report">
+              <div class="container">
+                  <div class="section-heading scrollpoint sp-effect3">
+                      <h1>Report</h1>
+                  </div>
+                  <div class="row">
+                      <div class="col-xs-12 col-md-6 col-md-offset-3">
+                          <form>
+                              <div class="form-group">
+                                  <label for="email-address">Email address</label>
+                                  <input required type="email" class="form-control input-lg" id="email-address" placeholder="Email">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="theReport" id="count_message">Report</label>
+                                  <h6 class="pull-right" id=""></h6>
+                                  <textarea required class="form-control input-lg" rows="5" id="theReport" placeholder="Describe the problem in a few words"></textarea>
+                              </div>
+
+                              <div class="form-group text-center">
+                                  <button class="btn btn-primary btn-lg" id="reportButton">Submit</button>
+                              </div>
+                          </form>
+                      </div>
+
+                  </div>
+              </div>
+          </section>
+
+
         <footer>
             <div class="container">
                 <a href="#" class="scrollpoint sp-effect3">
@@ -461,6 +492,50 @@
     <script>
         $(document).ready(function() {
             appMaster.preLoader();
+
+            $(document).ready(function() {
+                  appMaster.preLoader();
+                  var text_max = 500;
+                  $('#count_message').html("Report - " + text_max + ' characters left');
+
+                  $('#theReport').keyup(function() {
+                      var text_length = $('#theReport').val().length;
+                      var text_remaining = text_max - text_length;
+
+                      var btnElem = $("#reportButton");
+                      if(text_remaining <= 0){
+                          // too much
+                          if(!btnElem.attr("disabled")){
+                              btnElem.attr("disabled", true);
+                          }
+
+                          if(!btnElem.hasClass("btn-danger")){
+                              btnElem.removeClass("btn-primary");
+                              btnElem.addClass("btn-danger");
+                          }
+
+                          if(btnElem.text() === "Submit"){
+                              btnElem.text("Can't Submit - Too many characters!");
+                          }
+                      } else {
+
+                          if(btnElem.attr("disabled")){
+                              btnElem.attr("disabled", false);
+                          }
+
+                          if(btnElem.hasClass("btn-danger")){
+                              btnElem.removeClass("btn-danger");
+                              btnElem.addClass("btn-primary");
+                          }
+
+                          if(btnElem.text() != "Submit"){
+                              btnElem.text("Submit");
+                          }
+                      }
+
+                      $('#count_message').html("Report - " + text_remaining + ' characters left');
+                  });
+              });
         });
 
         function notReady(){
