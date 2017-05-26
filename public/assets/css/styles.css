@@ -1,3 +1,7 @@
+.red{
+  color: #ef4141;
+}
+
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 .video-container {
   position: relative;

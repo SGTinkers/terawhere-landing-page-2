@@ -423,6 +423,15 @@
         </div>
     </section>
 
+    <section id="report-success" class="hidden">
+        <div class="section-heading scrollpoint sp-effect3">
+            <h1>Thank you!</h1>
+        </div>
+        <div class="row text-center">
+            <h1>Thank you for the report! We will get back to you shortly.</h1>
+        </div>
+    </section>
+
     <section id="report">
         <div class="container">
             <div class="section-heading scrollpoint sp-effect3">
@@ -430,19 +439,37 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 col-md-6 col-md-offset-3">
-                    <form>
+                    <form id="report-form" action="#">
                         <div class="form-group">
-                            <label for="email-address">Email address</label>
-                            <input required type="email" class="form-control input-lg" id="email-address" placeholder="Email">
+                            <label for="email">Email address</label>
+                            <input required required type="email" class="form-control input-lg" id="email" placeholder="Email">
+                        </div>
+
+                        <hr  />
+
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input required required type="text" class="form-control input-lg" id="title" placeholder="Title of report">
                         </div>
 
                         <div class="form-group">
-                            <label for="theReport" id="count_message">Report</label>
-                            <h6 class="pull-right" id=""></h6>
-                            <textarea required class="form-control input-lg" rows="5" id="theReport" placeholder="Describe the problem in a few words"></textarea>
+                            <label for="phone-type">Phone Type</label>
+                            <select required class="form-control" id="os">
+                                <option value="android">Android</option>
+                                <option value="ios">iOS</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="body" id="count_message">Report</label>
+                            <textarea required class="form-control input-lg" rows="5" id="body" placeholder="Describe the problem in a few words"></textarea>
                         </div>
 
                         <div class="form-group text-center">
+                            <div id="report-error" class="hidden">
+                                <h3 class="red">Something went wrong.<br  /> Please try again later.</h3>
+                            </div>
                             <button class="btn btn-primary btn-lg" id="reportButton">Submit</button>
                         </div>
                     </form>
@@ -489,55 +516,95 @@
     $(document).ready(function() {
         appMaster.preLoader();
 
-        $(document).ready(function() {
-            // check if mobile
-            if(window.innerWidth <= 800){
-                $("nav").removeClass("navbar-fixed-top");
-            }
+        // check if mobile
+        if(window.innerWidth <= 800){
+            $("nav").removeClass("navbar-fixed-top");
+        }
 
-            appMaster.preLoader();
-            var text_max = 500;
-            $('#count_message').html("Report - " + text_max + ' characters left');
+        var text_max = 500;
+        $('#count_message').html("Report - " + text_max + ' characters left');
 
-            $('#theReport').keyup(function() {
-                var text_length = $('#theReport').val().length;
-                var text_remaining = text_max - text_length;
+        $('#theReport').keyup(function() {
+            var text_length = $('#theReport').val().length;
+            var text_remaining = text_max - text_length;
 
-                var btnElem = $("#reportButton");
-                if(text_remaining <= 0){
-                    // too much
-                    if(!btnElem.attr("disabled")){
-                        btnElem.attr("disabled", true);
-                    }
-
-                    if(!btnElem.hasClass("btn-danger")){
-                        btnElem.removeClass("btn-primary");
-                        btnElem.addClass("btn-danger");
-                    }
-
-                    if(btnElem.text() === "Submit"){
-                        btnElem.text("Can't Submit - Too many characters!");
-                    }
-                } else {
-
-                    if(btnElem.attr("disabled")){
-                        btnElem.attr("disabled", false);
-                    }
-
-                    if(btnElem.hasClass("btn-danger")){
-                        btnElem.removeClass("btn-danger");
-                        btnElem.addClass("btn-primary");
-                    }
-
-                    if(btnElem.text() != "Submit"){
-                        btnElem.text("Submit");
-                    }
+            var btnElem = $("#reportButton");
+            if(text_remaining <= 0){
+                // too much
+                if(!btnElem.attr("disabled")){
+                    btnElem.attr("disabled", true);
                 }
 
-                $('#count_message').html("Report - " + text_remaining + ' characters left');
-            });
+                if(!btnElem.hasClass("btn-danger")){
+                    btnElem.removeClass("btn-primary");
+                    btnElem.addClass("btn-danger");
+                }
+
+                if(btnElem.text() === "Submit"){
+                    btnElem.text("Can't Submit - Too many characters!");
+                }
+            } else {
+
+                if(btnElem.attr("disabled")){
+                    btnElem.attr("disabled", false);
+                }
+
+                if(btnElem.hasClass("btn-danger")){
+                    btnElem.removeClass("btn-danger");
+                    btnElem.addClass("btn-primary");
+                }
+
+                if(btnElem.text() != "Submit"){
+                    btnElem.text("Submit");
+                }
+            }
+
+            $('#count_message').html("Report - " + text_remaining + ' characters left');
+        });
+
+        $("#report-form").submit(function(event){
+            event.preventDefault();
+            if(confirm("Are you sure you want to submit this report?")){
+                submitHandler(event);
+            }
+
         });
     });
+
+    function submitHandler(e){
+        var email = $("#email").val();
+        var title = $("#title").val();
+        var body = $("#body").val();
+        var os = $("#os").val();
+
+        var report = {
+            email: email,
+            title: title,
+            body: body,
+            os: os
+        }
+
+        function success(e){
+            $("#report").addClass("hidden");
+            $("#report-success").removeClass("hidden");
+        }
+
+        function error(){
+            $("#report-error").removeClass("hidden")
+            $("#reportButton").attr("disabled", true);
+            $("#reportButton").removeClass("btn-primary");
+            $("#reportButton").addClass("btn-danger");
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "https://api.terawhere.com/api/v1/reports",
+            data: report,
+            success: success,
+            error: error,
+            dataType: "json"
+        });
+    }
 
     function notReady(){
         sweetAlert("Awww...", "The iOS version of this app is not yet available. We hope to launch it soon insyaallah!", "error");
