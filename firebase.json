@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-{}
-=======
 {
   "database": {
     "rules": "database.rules.json"
@@ -9,4 +6,3 @@
     "public": "public"
   }
 }
->>>>>>> 4b28053ed73244df96b85635461cc2f29213f95a

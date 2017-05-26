@@ -153,6 +153,14 @@ header .navbar-default.scrolled ul.navbar-nav {
   z-index: 0;
   bottom: -70px;
 }
+
+@media (max-width: 768px){
+  .section-heading{
+    margin-top: 16px !important;
+    margin-bottom: 32px !important;
+  }
+}
+
 .section-heading {
   margin: 60px 0 80px;
   text-align: center;
@@ -937,6 +945,12 @@ section#demo  img {
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
   filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}
+
+@media (max-width: 768px){
+  section#demo  img {
+    margin-bottom: 16px;
+  }
 }
 
   /* Disable grayscale on hover */

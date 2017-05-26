@@ -19,7 +19,6 @@
   }
 
 
-
 @media (max-width: 768px) {
   .as-a .header{
     text-align: center !important;
@@ -28,4 +27,9 @@
   .as-a .feature {
     text-align: center !important;
   }
+}
+
+.slider img{
+  /*-webkit-filter: sepia(1);
+  filter: sepia(1);*/
 }
