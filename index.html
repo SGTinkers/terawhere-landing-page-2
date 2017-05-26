@@ -14,15 +14,15 @@
     <link rel="shortcut icon" href="favicon.ico">
 
     <!-- Bootstrap 3.3.2 -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/assets/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/js/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="public/assets/css/animate.css">
+    <link rel="stylesheet" href="public/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/assets/css/slick.css">
+    <link rel="stylesheet" href="public/assets/js/rs-plugin/css/settings.css">
 
-    <link rel="stylesheet" href="assets/css/styles.css">
-
+    <link rel="stylesheet" href="public/assets/css/styles.css">
+    <link rel="stylesheet" href="public/assets/css/features.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
 
 
@@ -37,7 +37,7 @@
 
     <div class="pre-loader">
         <div class="load-con">
-            <img src="assets/img/freeze/logo.png" class="animated fadeInDown" alt="">
+            <img src="public/assets/img/freeze/logo.png" class="animated fadeInDown" alt="">
             <div class="spinner">
               <div class="bounce1"></div>
               <div class="bounce2"></div>
@@ -56,7 +56,7 @@
                             <span class="fa fa-bars fa-lg"></span>
                         </button>
                         <a class="navbar-brand" href="index.html">
-                            <img src="assets/img/freeze/logo.png" alt="" class="logo">
+                            <img src="public/assets/img/freeze/logo.png" alt="" class="logo">
                         </a>
                     </div>
 
@@ -84,13 +84,13 @@
 
 
         <!--RevSlider-->
-        <div class="tp-banner-container">
-            <div class="tp-banner" >
+        <div class="tp-banner-container ">
+            <div class="tp-banner">
                 <ul>
                     <!-- SLIDE 3 -->
-                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
                       <!-- MAIN IMAGE -->
-                      <img src="assets/img/transparent.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                      <img src="public/assets/img/transparent.png"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                       <!-- LAYERS -->
                       <!-- LAYER NR. 1 -->
                       <div class="tp-caption lfl fadeout hidden-xs"
@@ -101,24 +101,27 @@
                           data-speed="500"
                           data-start="700"
                           data-easing="Power4.easeOut">
-                          <img src="assets/img/freeze/Slides/hand-freeze.png" alt="">
+                          <img src="public/assets/img/freeze/Slides/hand-freeze.png" alt="">
                       </div>
 
-                      <div class="tp-caption lfl fadeout visible-xs"
-                          data-x="left"
-                          data-y="center"
-                          data-hoffset="700"
-                          data-voffset="0"
-                          data-speed="500"
-                          data-start="700"
-                          data-easing="Power4.easeOut">
-                          <img src="assets/img/freeze/Slides/hand-freeze.png" width="250" alt="">
-                      </div>
-
-                      <div class="tp-caption large_white_bold sft" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
+                      <div class="tp-caption large_white_bold sft"
+                      data-x="550"
+                      data-y="center"
+                      data-hoffset="0"
+                      data-voffset="-80"
+                      data-speed="500"
+                      data-start="1200"
+                      data-easing="Power4.easeOut">
                           Going for Terawih
                       </div>
-                      <div class="tp-caption large_white_light sfb" data-x="550" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
+                      <div class="tp-caption large_white_light sfb"
+                      data-x="550"
+                      data-y="center"
+                      data-hoffset="0"
+                      data-voffset="0"
+                      data-speed="1000"
+                      data-start="1500"
+                      data-easing="Power4.easeOut">
                           has never been easier
                       </div>
 
@@ -128,10 +131,7 @@
                       <div class="tp-caption sfr hidden-xs" data-x="730" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1500" data-start="1900" data-easing="Power4.easeOut">
                           <a href="#getApp" class="btn btn-default btn-lg">Download</a>
                       </div>
-
                   </li>
-
-
                 </ul>
             </div>
         </div>
@@ -194,11 +194,11 @@
                     <p>Its as easy as 1, 2, 3!</p>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-sm-4 scrollpoint sp-effect1">
-                        <h1 style="text-align: right"> As a Driver </h1>
+                    <div class="col-xs-12 col-md-4 col-sm-4 scrollpoint sp-effect1 as-a driver">
+                        <h1 class="header">As a Driver</h1>
 
-                        <div class="media text-right feature">
-                            <a class="pull-right" href="#features">
+                        <div class="media feature">
+                            <a href="#features">
                                 <i class="fa fa-map-marker fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -206,8 +206,8 @@
                                  Provide pickup details, no. of seats available, and your Terawih destination.
                             </div>
                         </div>
-                        <div class="media text-right feature">
-                            <a class="pull-right" href="#features">
+                        <div class="media feature">
+                            <a href="#features">
                                 <i class="fa fa-bell fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -215,8 +215,8 @@
                                 You will be notified once a passenger books your ride offer.
                             </div>
                         </div>
-                        <div class="media text-right feature">
-                            <a class="pull-right" href="#features">
+                        <div class="media feature">
+                            <a href="#features">
                                 <i class="fa fa-car fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -225,10 +225,10 @@
                             </div>
                         </div>
 
-                        <div class="media text-right feature">
+                        <div class="media feature text-center">
                             <br />
                             <br />
-                             <a href="https://youtu.be/SQhRIWjY3cY" class="btn btn-primary btn-lg" target="_blank">
+                             <a href="https://youtu.be/SQhRIWjY3cY" class="btn btn-primary btn-lg btn-tutorial" target="_blank">
                                 <i class="fa fa-play-circle fa-1x" style="padding:0; margin: 0; border:0;" aria-hidden="true"></i>
                                 Drivers' Tutorial
                              </a>
@@ -236,13 +236,13 @@
                        <br />
 
                     </div>
-                    <div class="col-md-4 col-sm-4 text-center" >
-                        <img src="assets/img/freeze/android2.png" class="sp-effect5" height="550" alt="">
+                    <div class="col-xs-12 col-md-4 col-sm-4 text-center" >
+                        <img src="public/assets/img/freeze/android2.png" class="sp-effect5" height="550" alt="">
                     </div>
-                    <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
-                    <h1> As a Passenger </h1>
+                    <div class="col-xs-12 col-md-4 col-sm-4 scrollpoint sp-effect2 as-a passenger">
+                      <h1 class="header"> As a Passenger </h1>
                         <div class="media feature">
-                            <a class="pull-left" href="#features">
+                            <a href="#features">
                                 <i class="fa fa-compass fa-2x" aria-hidden="true"></i>
                             </a>
                             <div class="media-body">
@@ -251,7 +251,7 @@
                             </div>
                         </div>
                         <div class="media feature">
-                            <a class="pull-left" href="#features">
+                            <a href="#features">
                                 <i class="fa fa-check-circle fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -260,7 +260,7 @@
                             </div>
                         </div>
                         <div class="media feature">
-                            <a class="pull-left" href="#features">
+                            <a href="#features">
                                 <i class="fa fa-car fa-2x"></i>
                             </a>
                             <div class="media-body">
@@ -268,10 +268,10 @@
                                 Meet up with your new friend and enjoy the ride to Terawih!
                             </div>
                         </div>
-                        <div class="media text-left feature">
+                        <div class="media feature text-center">
                             <br />
                             <br />
-                             <a href="https://youtu.be/Z31_vzWWbAU" target="_blank" class="btn btn-primary btn-lg">
+                             <a href="https://youtu.be/Z31_vzWWbAU" target="_blank" class="btn btn-primary btn-lg btn-tutorial">
                                 <i class="fa fa-play-circle fa-1x" style="padding:0; margin: 0; border:0;" aria-hidden="true"></i>
                                 Passengers' Tutorial
                              </a>
@@ -292,7 +292,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="hanging-phone scrollpoint sp-effect2 hidden-xs">
-                            <img src="assets/img/freeze/freeze-angled2.png" alt="">
+                            <img src="public/assets/img/freeze/freeze-angled2.png" alt="">
                         </div>
                         <div class="platforms">
                             <a href="https://play.google.com/store/apps/details?id=tech.msociety.terawhere" class="btn btn-primary inverse scrollpoint sp-effect1">
@@ -324,19 +324,19 @@
                 <div class="row">
                     <div class="col-md-12 scrollpoint sp-effect2  text-center">
                       <a href="http://berita.mediacorp.sg/mobilem/lifestyle/aplikasi-terawhere-terawih-where-dicipta-untuk-hantar-anda-ke/3708570.html?cid=berita-fb" target="_blank">
-                        <img src="assets/img/freeze/bm.png" height="130" class="featuredLogo"/>
+                        <img src="public/assets/img/freeze/bm.png" height="130" class="featuredLogo"/>
                       </a>
                       <a href="http://www.beritaharian.sg/gah/aplikasi-terawhere-permudah-kongsi-kereta-ke-masjid-bagi-tarawih" target="_blank">
-                        <img src="assets/img/freeze/bh.jpg" height="130" class="featuredLogo"/>
+                        <img src="public/assets/img/freeze/bh.jpg" height="130" class="featuredLogo"/>
                       </a>
                       <a href="http://www.straitstimes.com/singapore/a-touch-of-sharing-during-ramadan" target="_blank">
-                        <img src="assets/img/freeze/st.jpg" height="115" class="featuredLogo"/>
+                        <img src="public/assets/img/freeze/st.jpg" height="115" class="featuredLogo"/>
                       </a>
                       <a href="http://www.todayonline.com/singapore/free-carpooling-app-mosque-goers-be-launched-time-ramadan">
-                        <img src="assets/img/freeze/today.png" height="130" class="featuredLogo"/>
+                        <img src="public/assets/img/freeze/today.png" height="130" class="featuredLogo"/>
                       </a>
                       <a href="http://techwireasia.com/2017/05/singapore-terawhere-app-helps-muslims-carpool-ramadan/" target="_blank">
-                        <img src="assets/img/freeze/tech-wire-asia.png" height="130" class="featuredLogo"/>
+                        <img src="public/assets/img/freeze/tech-wire-asia.png" height="130" class="featuredLogo"/>
                       </a>
                     </div>
                 </div>
@@ -360,67 +360,67 @@
                 </div>
                 <div class="slider filtering scrollpoint sp-effect5" >
                     <div class="one">
-                        <img src="assets/img/faruq.jpg" width="200" alt="">
+                        <img src="public/assets/img/faruq.jpg" width="200" alt="">
                         <h3>Faruq Rasid</h3>
                         <p class="">Project Manager (Tech)</p>
                     </div>
                     <div class="three">
-                        <img src="assets/img/hafidz.jpg" width="200" alt="">
+                        <img src="public/assets/img/hafidz.jpg" width="200" alt="">
                         <h3>Tengku Hafidz</h3>
                         <p class="">Asst. Project Manager (Non-Tech)</p>
                     </div>
                     <div class="one">
-                        <img src="assets/img/aziz.jpg" width="200" alt="">
+                        <img src="public/assets/img/aziz.jpg" width="200" alt="">
                         <h3>Abdul Aziz</h3>
                         <p class="">Back-End Developer</p>
                     </div>
                     <div class="one">
-                        <img src="assets/img/mirza.jpg" width="200" alt="">
+                        <img src="public/assets/img/mirza.jpg" width="200" alt="">
                         <h3>Mirza Yazid</h3>
                         <p class="">iOS Developer</p>
                     </div>
                     <div class="one">
-                        <img src="assets/img/musa.jpg" width="200" alt="">
+                        <img src="public/assets/img/musa.jpg" width="200" alt="">
                         <h3>Musa Rahamat</h3>
                         <p class="">Android Developer</p>
                     </div>
                     <div class="one">
-                        <img src="assets/img/saiful.jpg" width="200" alt="">
+                        <img src="public/assets/img/saiful.jpg" width="200" alt="">
                         <h3>Saiful Shahril</h3>
                         <p class="">Android Developer</p>
                     </div>
                     <div class="one">
-                        <img src="assets/img/irfan.jpg" width="200" alt="">
+                        <img src="public/assets/img/irfan.jpg" width="200" alt="">
                         <h3>Muhd Irfan</h3>
                         <p class="">Android Developer</p>
                     </div>
                     <div class="one">
-                        <img src="assets/img/syafiq.jpg" width="200" alt="">
+                        <img src="public/assets/img/syafiq.jpg" width="200" alt="">
                         <h3>Syafiq Hanafee</h3>
                         <p class="">Web Developer</p>
                     </div>
                     <div class="two">
-                        <img src="assets/img/akmal.jpg" width="200" alt="">
+                        <img src="public/assets/img/akmal.jpg" width="200" alt="">
                         <h3>Khairul Akmal</h3>
                         <p class="">UI/UX Designer</p>
                     </div>
                     <div class="two">
-                        <img src="assets/img/atiqah.jpg" width="200" alt="">
+                        <img src="public/assets/img/atiqah.jpg" width="200" alt="">
                         <h3>Atiqah Khalim</h3>
                         <p class="">UI/UX Designer</p>
                     </div>
                     <div class="three">
-                        <img src="assets/img/hadziq.jpg" width="200" alt="">
+                        <img src="public/assets/img/hadziq.jpg" width="200" alt="">
                         <h3>Hadziq Sulaiman</h3>
                         <p class="">Marketing Manager</p>
                     </div>
                     <div class="three">
-                        <img src="assets/img/khansaa.jpg" width="200" alt="">
+                        <img src="public/assets/img/khansaa.jpg" width="200" alt="">
                         <h3>Alkhansaa</h3>
                         <p class="">Marketing Manager</p>
                     </div>
                     <div class="three">
-                        <img src="assets/img/linna.jpg" width="200" alt="">
+                        <img src="public/assets/img/linna.jpg" width="200" alt="">
                         <h3>Linna</h3>
                         <p class="">Social Media Manager</p>
                     </div>
@@ -462,7 +462,7 @@
         <footer>
             <div class="container">
                 <a href="#" class="scrollpoint sp-effect3">
-                    <img src="assets/img/freeze/logo.png" alt="" class="logo">
+                    <img src="public/assets/img/freeze/logo.png" alt="" class="logo">
                 </a>
                 <div class="social">
                     <a href="http://twitter.com/msociety_tech" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
@@ -481,16 +481,16 @@
 
 
     </div>
-    <script src="assets/js/jquery-1.11.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/modernizr.custom.32033.js"></script>
+    <script src="public/assets/js/jquery-1.11.1.min.js"></script>
+    <script src="public/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="public/assets/js/modernizr.custom.32033.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/placeholdem.min.js"></script>
-    <script src="assets/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-    <script src="assets/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script src="public/assets/js/slick.min.js"></script>
+    <script src="public/assets/js/placeholdem.min.js"></script>
+    <script src="public/assets/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="public/assets/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="public/assets/js/waypoints.min.js"></script>
+    <script src="public/assets/js/scripts.js"></script>
     <script>
         $(document).ready(function() {
             appMaster.preLoader();
